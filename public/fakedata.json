@@ -3,36 +3,42 @@
         "id": 1001,
         "name": "Dental Surgery",
         "price": 3000,
-        "img": "https://i.ibb.co/k9gjSpv/41407-2015-Article-BFbdjteam2015109-Figa-HTML.png"
+        "description": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Molestias in natus ipsum sunt maiores ea reprehenderit debitis at cumque dolor!",
+        "img": "https://i.ibb.co/P5hFLrN/Untitled-design-19.png"
     },
     {
         "id": 1002,
         "name": "Braces",
         "price": 5000,
-        "img": "https://i.ibb.co/k9gjSpv/41407-2015-Article-BFbdjteam2015109-Figa-HTML.png"
+        "description": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Molestias in natus ipsum sunt maiores ea reprehenderit debitis at cumque dolor!",
+        "img": "https://i.ibb.co/gRFQvgM/Metal-Braces-on-Teeth-1.png"
     },
     {
         "id": 1003,
         "name": "Dental Implants",
         "price": 2000,
-        "img": "https://i.ibb.co/k9gjSpv/41407-2015-Article-BFbdjteam2015109-Figa-HTML.png"
+        "description": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Molestias in natus ipsum sunt maiores ea reprehenderit debitis at cumque dolor!",
+        "img": "https://i.ibb.co/56yrXYW/implant-benefits-1.jpg"
     },
     {
         "id": 1004,
         "name": "Dentures",
         "price": 2500,
-        "img": "https://i.ibb.co/k9gjSpv/41407-2015-Article-BFbdjteam2015109-Figa-HTML.png"
+        "description": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Molestias in natus ipsum sunt maiores ea reprehenderit debitis at cumque dolor!",
+        "img": "https://i.ibb.co/C5fFw0M/implant-dentures-300x246.png"
     },
     {
         "id": 1005,
         "name": "Periodontology",
         "price": 1500,
-        "img": "https://i.ibb.co/k9gjSpv/41407-2015-Article-BFbdjteam2015109-Figa-HTML.png"
+        "description": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Molestias in natus ipsum sunt maiores ea reprehenderit debitis at cumque dolor!",
+        "img": "https://i.ibb.co/vqWPQK6/istockphoto-1163655903-640x640.png"
     },
     {
         "id": 1006,
         "name": "Cosmetic Whitening",
         "price": 4000,
+        "description": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Molestias in natus ipsum sunt maiores ea reprehenderit debitis at cumque dolor!",
         "img": "https://i.ibb.co/k9gjSpv/41407-2015-Article-BFbdjteam2015109-Figa-HTML.png"
     }
 ]

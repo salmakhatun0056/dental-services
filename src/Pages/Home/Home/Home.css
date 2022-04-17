@@ -17,6 +17,8 @@
 .service-container {
     display: grid;
     grid-template-columns: repeat(3, 1fr);
+    gap: 3rem;
+
 }
 
 @media only screen and (max-width:576px) {
@@ -27,4 +29,10 @@
         margin-top: 15px;
     }
 
+}
+
+@media only screen and (max-width:576px) {
+    .service-container {
+        grid-template-columns: repeat(1, 1fr);
+    }
 }

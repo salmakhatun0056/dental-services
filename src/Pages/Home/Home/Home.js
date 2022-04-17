@@ -1,6 +1,7 @@
 import React, { useEffect, useState } from 'react';
 import './Home.css'
 import Service from '../Service/Service'
+import { CardGroup } from 'react-bootstrap';
 
 const Home = () => {
     const [services, setServices] = useState([])
@@ -21,15 +22,15 @@ const Home = () => {
                 </div>
             </main>
             <div>
-                <h2>My Services</h2>
-                <div className='service-container'>
+                <h2 className='my-4 text-info'>My Services</h2>
+                <CardGroup className='service-container container mb-2'>
                     {
                         services.map(service => <Service
                             key={service.id}
                             service={service}
                         ></Service>)
                     }
-                </div>
+                </CardGroup>
             </div>
         </div>
     );
