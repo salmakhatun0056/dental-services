@@ -2,43 +2,43 @@
     {
         "id": 1001,
         "name": "Dental Surgery",
-        "price": 3000,
-        "description": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Molestias in natus ipsum sunt maiores ea reprehenderit debitis at cumque dolor!",
+        "price": 10000,
+        "description": "Oral surgery is a broad term for any operation performed on the structure of your teeth, gums, jaw and mouth. These include tooth extraction, dental bone grafts, corrective jaw surgery .",
         "img": "https://i.ibb.co/P5hFLrN/Untitled-design-19.png"
     },
     {
         "id": 1002,
         "name": "Braces",
         "price": 5000,
-        "description": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Molestias in natus ipsum sunt maiores ea reprehenderit debitis at cumque dolor!",
+        "description": "Dental braces can cause a damage that can be adjusted above the wound bandage. Consistent giant patty layout makes it difficult to bite anything perfectly and conveniently, the true dental brace for their treatment.",
         "img": "https://i.ibb.co/gRFQvgM/Metal-Braces-on-Teeth-1.png"
     },
     {
         "id": 1003,
         "name": "Dental Implants",
         "price": 2000,
-        "description": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Molestias in natus ipsum sunt maiores ea reprehenderit debitis at cumque dolor!",
-        "img": "https://i.ibb.co/56yrXYW/implant-benefits-1.jpg"
+        "description": "A dental implant is a prosthesis that intersects with the jawbone or skull bone to help the denture act as an artificial prosthesis or orthodontic anchor, such as a crown, bridge, denture, or facial prosthesis.",
+        "img": "https://i.ibb.co/fXXvxdv/implant-benefits-1-1.png"
     },
     {
         "id": 1004,
         "name": "Dentures",
         "price": 2500,
-        "description": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Molestias in natus ipsum sunt maiores ea reprehenderit debitis at cumque dolor!",
+        "description": "When an adult loses a tooth, it is best to replace it with another artificial or artificial tooth in the right place, which does not mean that it is not real.",
         "img": "https://i.ibb.co/C5fFw0M/implant-dentures-300x246.png"
     },
     {
         "id": 1005,
         "name": "Periodontology",
         "price": 1500,
-        "description": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Molestias in natus ipsum sunt maiores ea reprehenderit debitis at cumque dolor!",
+        "description": "Periodontics is the specialty of dentistry that affects the supporting structures of teeth as well as the diseases and conditions that affect them.",
         "img": "https://i.ibb.co/vqWPQK6/istockphoto-1163655903-640x640.png"
     },
     {
         "id": 1006,
         "name": "Cosmetic Whitening",
         "price": 4000,
-        "description": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Molestias in natus ipsum sunt maiores ea reprehenderit debitis at cumque dolor!",
+        "description": "Teeth whitening (or bleaching) is a simple, non-invasive dental treatment used to change the color of natural tooth enamel and is an ideal way to enhance the beauty of your smile.",
         "img": "https://i.ibb.co/k9gjSpv/41407-2015-Article-BFbdjteam2015109-Figa-HTML.png"
     }
 ]

@@ -15,7 +15,7 @@ const Home = () => {
             <main className="home-container col-lg-6 col-12">
                 <div className="home-detail text-center ms-2">
                     <h1 className='home-title text-info'>Professional and experienced<br /><span className='title-style'>Dentist </span></h1>
-                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Molestias in natus ipsum sunt maiores ea reprehenderit debitis at cumque dolor!</p>
+                    <p>Thank you for visiting my website.Teeth an organ that is very important to us.So its taking great care is also  important.I can give advice on how to keep this tooth healthy and beautiful. Even sick people are treated here.</p>
                 </div>
                 <div className="home-picture">
                     <img src="https://i.ibb.co/FmDszk2/welcome-dental-care-vector-illustration-cartoon-character-533406-114-2.png" alt="" />
