@@ -17,7 +17,7 @@ const Register = () => {
         <div>
             <h1 className='text-info text-center mt-5'>Please Registration</h1>
             <Form onSubmit={handleRegister} className='w-50 mx-auto'>
-                <Form.Group className="mb-3" controlId="formBasicEmail">
+                <Form.Group className="mb-3" controlId="formBasicName">
                     <Form.Label>Your Name</Form.Label>
                     <Form.Control ref={nameRef} type="name" placeholder="Your Name" />
                 </Form.Group>
