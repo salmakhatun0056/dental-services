@@ -4,8 +4,8 @@ import './Footer.css'
 const Footer = () => {
     return (
         <div className='bg-info text-white mt-5'>
-            <div className='container footer-detail '>
-                <div className='mt-5'>
+            <div className='container footer-details '>
+                <div className='mt-5 footer-detail'>
                     <h4>Home</h4>
                     <p>Home</p>
                     <p>Community</p>
