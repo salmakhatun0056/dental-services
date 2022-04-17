@@ -14,7 +14,7 @@ const Home = () => {
         <div>
             <main className="home-container col-lg-6 col-12">
                 <div className="home-detail">
-                    <h1 className='home-title'>Professional and experienced<br /><span className='title-style'>Dentist </span></h1>
+                    <h1 className='home-title text-info'>Professional and experienced<br /><span className='title-style'>Dentist </span></h1>
                     <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Molestias in natus ipsum sunt maiores ea reprehenderit debitis at cumque dolor!</p>
                 </div>
                 <div className="home-picture">

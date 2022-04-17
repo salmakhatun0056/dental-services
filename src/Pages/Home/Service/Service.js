@@ -1,13 +1,16 @@
 import React from 'react';
 import { Card, CardGroup } from 'react-bootstrap';
-import { Link, useLocation, useNavigate } from 'react-router-dom';
+import { Link, useLocation, useNavigate, useParams } from 'react-router-dom';
+import CustomLink from '../../Shared/CustomLink/CustomLink';
 import './Service.css'
 
 const Service = ({ service }) => {
-    const { name, img, price, description } = service
+    const { name, img, price, description, id } = service
+
     // const navigate = useNavigate()
-    // const location = useLocation()
-    // navigate('/checkout')
+    // const navigateToServiceDetail = id => {
+    //     navigate(`/checkout/${id}`)
+    //     const { checkoutId } = useParams()
     return (
 
         <Card className='service'>
@@ -21,7 +24,7 @@ const Service = ({ service }) => {
 
             </Card.Body>
             <Card.Footer>
-                <button className="btn btn-info w-100 text-white">Check Out</button>
+                <CustomLink className='btn btn-info w-100' as={Link} to="/checkout">CheckOut</CustomLink>
             </Card.Footer>
         </Card>
 

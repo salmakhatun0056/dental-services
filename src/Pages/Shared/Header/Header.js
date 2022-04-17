@@ -5,21 +5,19 @@ import CustomLink from '../CustomLink/CustomLink';
 
 const Header = () => {
     return (
-        <Navbar collapseOnSelect sticky="top" expand="lg" bg="dark" variant="dark">
+        <Navbar className='fs-5 text' collapseOnSelect sticky="top" expand="lg" bg="info" variant="light">
             <Container>
-                <Navbar.Brand as={Link} to="/">React-Bootstrap</Navbar.Brand>
+                <CustomLink to="/home">Home</CustomLink>
                 <Navbar.Toggle aria-controls="responsive-navbar-nav" />
                 <Navbar.Collapse id="responsive-navbar-nav">
                     <Nav className="me-auto">
                         <CustomLink to="/features">Features</CustomLink>
                         <CustomLink to="/pricing">Pricing</CustomLink>
+
                     </Nav>
-                    <Nav>
-                        <CustomLink as={Link} to="/deets">More deets</CustomLink>
-                        <CustomLink as={Link} to="/memes">
-                            Dank memes
-                        </CustomLink>
-                    </Nav>
+                    <CustomLink to="/about">About</CustomLink>
+                    <CustomLink to='/login'>Login</CustomLink>
+                    <CustomLink to="/register">Register</CustomLink>
                 </Navbar.Collapse>
             </Container>
         </Navbar>
