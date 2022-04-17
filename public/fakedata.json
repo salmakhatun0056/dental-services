@@ -1,0 +1,38 @@
+[
+    {
+        "id": 1001,
+        "name": "Dental Surgery",
+        "price": 3000,
+        "img": "https://i.ibb.co/k9gjSpv/41407-2015-Article-BFbdjteam2015109-Figa-HTML.png"
+    },
+    {
+        "id": 1002,
+        "name": "Braces",
+        "price": 5000,
+        "img": "https://i.ibb.co/k9gjSpv/41407-2015-Article-BFbdjteam2015109-Figa-HTML.png"
+    },
+    {
+        "id": 1003,
+        "name": "Dental Implants",
+        "price": 2000,
+        "img": "https://i.ibb.co/k9gjSpv/41407-2015-Article-BFbdjteam2015109-Figa-HTML.png"
+    },
+    {
+        "id": 1004,
+        "name": "Dentures",
+        "price": 2500,
+        "img": "https://i.ibb.co/k9gjSpv/41407-2015-Article-BFbdjteam2015109-Figa-HTML.png"
+    },
+    {
+        "id": 1005,
+        "name": "Periodontology",
+        "price": 1500,
+        "img": "https://i.ibb.co/k9gjSpv/41407-2015-Article-BFbdjteam2015109-Figa-HTML.png"
+    },
+    {
+        "id": 1006,
+        "name": "Cosmetic Whitening",
+        "price": 4000,
+        "img": "https://i.ibb.co/k9gjSpv/41407-2015-Article-BFbdjteam2015109-Figa-HTML.png"
+    }
+]
