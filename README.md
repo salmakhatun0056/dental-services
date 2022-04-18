@@ -1,5 +1,5 @@
 # Dental Services
-[Firebase Website](assignment-10-bdab6.web.app)
+[Firebase Website](assignment-10-bdab6.firebaseapp.com)
 
 * Many of the components have been used
 * Destructive has been used
