@@ -1,4 +1,4 @@
-# HOLY QURAN CENTER
+# Dental Services
 [Netlify website](https://elegant-klepon-dbfbaa.netlify.app/)
 
 * Many of the components have been used

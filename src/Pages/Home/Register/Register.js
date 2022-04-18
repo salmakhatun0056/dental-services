@@ -1,7 +1,7 @@
 import React, { useRef } from 'react';
 import { Button, Form } from 'react-bootstrap';
 import auth from '../../../firebase.init';
-import { useCreateUserWithEmailAndPassword } from 'react-firebase-hooks/auth';
+import { useCreateUserWithEmailAndPassword, useUpdateProfile } from 'react-firebase-hooks/auth';
 import { Link, useNavigate } from 'react-router-dom';
 import SocialLogin from '../SocialLogin/SocialLogin';
 
@@ -10,18 +10,27 @@ const Register = () => {
     const passwordRef = useRef('')
     const nameRef = useRef('')
     const navigate = useNavigate()
-    const [createUserWithEmailAndPassword, user, loading, error,] = useCreateUserWithEmailAndPassword(auth);
+    const [
+        createUserWithEmailAndPassword,
+        user,
+        loading,
+        error,
+    ] = useCreateUserWithEmailAndPassword(auth, { sendEmailVerification: true });
+    const [updateProfile, updating, updateError] = useUpdateProfile(auth);
 
-    const handleRegister = (event) => {
+    const handleRegister = async (event) => {
         const email = emailRef.current.value
         const password = passwordRef.current.value
         const name = nameRef.current.value
         event.preventDefault()
-        createUserWithEmailAndPassword(email, password)
+        await createUserWithEmailAndPassword(email, password)
+        await updateProfile({ displayName: name });
+        console.log('Updated profile');
+        navigate('/home')
     }
-    if (user) {
-        navigate('/')
-    }
+    // if (user) {
+
+    // }
     return (
         <div>
             <h1 className='text-info text-center mt-5'>Please Registration</h1>
@@ -42,11 +51,8 @@ const Register = () => {
                 </Form.Group>
 
                 <p>Already Have an account ? <Link to='/login' className='text-info pe-auto text-decoration-none'>Please login </Link></p>
-                <Form.Group className="mb-3" controlId="formBasicCheckbox">
-                    <Form.Check type="checkbox" label="Check me out" />
-                    {error && <p className='text-danger pe-auto'>{error.message}</p>}
-                    {loading && <p className='text-danger pe-auto'>loading...</p>}
-                </Form.Group>
+                {error && <p className='text-danger pe-auto'>{error.message}</p>}
+                {loading && <p className='text-danger pe-auto'>loading...</p>}
                 <Button variant="primary" type="submit">
                     Register
                 </Button>

@@ -40,9 +40,6 @@ const Login = () => {
                 </Form.Group>
 
                 <p>New to Dental Service ? <Link to='/register' className='text-info pe-auto text-decoration-none'>Please Register </Link></p>
-                <Form.Group className="mb-3" controlId="formBasicCheckbox">
-                    <Form.Check type="checkbox" label="Check me out" />
-                </Form.Group>
                 {error && <p className='text-danger pe-auto'>{error.message}</p>}
                 {loading && <p className='text-danger pe-auto'>loading...</p>}
                 <Button variant="primary" type="submit">
