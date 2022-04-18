@@ -1,17 +1,25 @@
 import React, { useRef } from 'react';
 import { Button, Form } from 'react-bootstrap';
-import { Link } from 'react-router-dom';
+import { useSignInWithEmailAndPassword } from 'react-firebase-hooks/auth';
+import { Link, useNavigate } from 'react-router-dom';
+import auth from '../../firebase.init';
 import SocialLogin from '../Home/SocialLogin/SocialLogin';
 
 const Login = () => {
     const emailRef = useRef('')
     const passwordRef = useRef('')
+    const [signInWithEmailAndPassword, user, loading, error,] = useSignInWithEmailAndPassword(auth);
+    const navigate = useNavigate()
 
     const handleRegister = (event) => {
         const email = emailRef.current.value
         const password = passwordRef.current.value
+        signInWithEmailAndPassword(email, password)
         console.log(password, email)
         event.preventDefault()
+    }
+    if (user) {
+        navigate('/home')
     }
     return (
         <div>
@@ -32,6 +40,8 @@ const Login = () => {
                 <Form.Group className="mb-3" controlId="formBasicCheckbox">
                     <Form.Check type="checkbox" label="Check me out" />
                 </Form.Group>
+                {error && <p className='text-danger pe-auto'>{error.message}</p>}
+                {loading && <p className='text-danger pe-auto'>loading...</p>}
                 <Button variant="primary" type="submit">
                     Submit
                 </Button>
