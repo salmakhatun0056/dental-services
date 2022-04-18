@@ -4,6 +4,7 @@ import auth from '../../../firebase.init';
 import { useCreateUserWithEmailAndPassword, useUpdateProfile } from 'react-firebase-hooks/auth';
 import { Link, useNavigate } from 'react-router-dom';
 import SocialLogin from '../SocialLogin/SocialLogin';
+import LoadSpinner from '../LoadSpinner/LoadSpinner';
 
 const Register = () => {
     const emailRef = useRef('')
@@ -28,9 +29,9 @@ const Register = () => {
         console.log('Updated profile');
         navigate('/home')
     }
-    // if (user) {
-
-    // }
+    if (loading || updating) {
+        return <LoadSpinner></LoadSpinner>
+    }
     return (
         <div>
             <h1 className='text-info text-center mt-5'>Please Registration</h1>
@@ -52,7 +53,6 @@ const Register = () => {
 
                 <p>Already Have an account ? <Link to='/login' className='text-info pe-auto text-decoration-none'>Please login </Link></p>
                 {error && <p className='text-danger pe-auto'>{error.message}</p>}
-                {loading && <p className='text-danger pe-auto'>loading...</p>}
                 <Button variant="primary" type="submit">
                     Register
                 </Button>

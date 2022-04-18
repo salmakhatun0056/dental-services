@@ -27,7 +27,6 @@ function App() {
         </Route>
         <Route path='/login' element={<Login></Login>}></Route>
         <Route path='/register' element={<Register></Register>}></Route>
-        {/* <Route path='/checkout/:checkoutId'></Route> */}
         <Route path='/blog' element={<Blog></Blog>}></Route>
         <Route path='*' element={<NotFound></NotFound>}></Route>
       </Routes>

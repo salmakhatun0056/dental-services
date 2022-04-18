@@ -1,14 +1,20 @@
 import React, { useRef } from 'react';
 import { Button, Form } from 'react-bootstrap';
-import { useSignInWithEmailAndPassword } from 'react-firebase-hooks/auth';
+import { useSendPasswordResetEmail, useSignInWithEmailAndPassword } from 'react-firebase-hooks/auth';
 import { Link, useLocation, useNavigate } from 'react-router-dom';
 import auth from '../../firebase.init';
+import LoadSpinner from '../Home/LoadSpinner/LoadSpinner';
 import SocialLogin from '../Home/SocialLogin/SocialLogin';
+import { ToastContainer, toast } from 'react-toastify';
+import 'react-toastify/dist/ReactToastify.css';
 
 const Login = () => {
     const emailRef = useRef('')
     const passwordRef = useRef('')
     const [signInWithEmailAndPassword, user, loading, error,] = useSignInWithEmailAndPassword(auth);
+    const [sendPasswordResetEmail, sending] = useSendPasswordResetEmail(
+        auth
+    );
     const navigate = useNavigate()
 
     const location = useLocation()
@@ -23,6 +29,19 @@ const Login = () => {
     }
     if (user) {
         navigate(from, { replace: true });
+    }
+    if (loading || sending) {
+        return <LoadSpinner></LoadSpinner>
+    }
+    const resetPassword = async () => {
+        const email = emailRef.current.value
+        if (email) {
+            await sendPasswordResetEmail(email);
+            toast('Sent email');
+        }
+        else {
+            toast('Please enter your email address')
+        }
     }
     return (
         <div>
@@ -40,12 +59,14 @@ const Login = () => {
                 </Form.Group>
 
                 <p>New to Dental Service ? <Link to='/register' className='text-info pe-auto text-decoration-none'>Please Register </Link></p>
+
+                <p>Forget password? <button onClick={resetPassword} className='text-info btn btn-link pe-auto text-decoration-none'>Reset password </button></p>
                 {error && <p className='text-danger pe-auto'>{error.message}</p>}
-                {loading && <p className='text-danger pe-auto'>loading...</p>}
                 <Button variant="primary" type="submit">
                     Submit
                 </Button>
             </Form>
+            <ToastContainer />
             <SocialLogin></SocialLogin>
         </div>
     );

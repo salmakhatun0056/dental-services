@@ -3,12 +3,16 @@ import { Button } from 'react-bootstrap';
 import { useSignInWithGoogle } from 'react-firebase-hooks/auth';
 import { useNavigate } from 'react-router-dom';
 import auth from '../../../firebase.init';
+import LoadSpinner from '../LoadSpinner/LoadSpinner';
 
 const SocialLogin = () => {
     const [signInWithGoogle, user, loading, error] = useSignInWithGoogle(auth);
     const navigate = useNavigate()
     if (user) {
         navigate('/')
+    }
+    if (loading) {
+        return <LoadSpinner></LoadSpinner>
     }
     return (
         <div className='w-50 mx-auto'>
@@ -18,7 +22,6 @@ const SocialLogin = () => {
                 <div style={{ height: '1px' }} className='bg-primary w-50'></div>
             </div>
             <Button onClick={() => signInWithGoogle()} className='w-50 d-block mx-auto text-white fw-bold' variant='info'>Sign In with Google</Button>
-            {loading && <p className='text-danger'>loading...</p>}
             {error && <p className='text-danger'>{error.message}</p>}
         </div>
     );
