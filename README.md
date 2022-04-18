@@ -1,5 +1,5 @@
 # Dental Services
-[Netlify website](https://elegant-klepon-dbfbaa.netlify.app/)
+[Firebase Website](assignment-10-bdab6.web.app)
 
 * Many of the components have been used
 * Destructive has been used
