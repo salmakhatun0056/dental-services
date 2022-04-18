@@ -1,5 +1,6 @@
 import React, { useRef } from 'react';
 import { Button, Form } from 'react-bootstrap';
+import { Link } from 'react-router-dom';
 
 const Login = () => {
     const emailRef = useRef('')
@@ -25,6 +26,8 @@ const Login = () => {
                     <Form.Label>Password</Form.Label>
                     <Form.Control ref={passwordRef} type="password" placeholder="Password" required />
                 </Form.Group>
+
+                <p>New to Dental Service ? <Link to='/register' className='text-info pe-auto text-decoration-none'>Please Register </Link></p>
                 <Form.Group className="mb-3" controlId="formBasicCheckbox">
                     <Form.Check type="checkbox" label="Check me out" />
                 </Form.Group>

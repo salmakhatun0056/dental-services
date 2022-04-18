@@ -1,10 +1,18 @@
 import React from 'react';
-import { Link, } from 'react-router-dom';
+import { useAuthState } from 'react-firebase-hooks/auth';
+import { Link, useNavigate, } from 'react-router-dom';
+import auth from '../../../firebase.init';
 import CustomLink from '../../Shared/CustomLink/CustomLink';
 import './Service.css'
 
 const Service = ({ service }) => {
     const { name, img, price, description } = service
+    // const [user] = useAuthState(auth);
+    // const navigate = useNavigate()
+
+    // if (!user) {
+    //     navigate('/login')
+    // }
     return (
 
         <div className='service p-2'>

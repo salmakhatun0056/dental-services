@@ -1,10 +1,33 @@
 import React, { useRef } from 'react';
 import { Button, Form } from 'react-bootstrap';
+import auth from '../../../firebase.init';
+import { useCreateUserWithEmailAndPassword } from 'react-firebase-hooks/auth';
+import { Link } from 'react-router-dom';
+
 
 const Register = () => {
+
     const emailRef = useRef('')
     const passwordRef = useRef('')
     const nameRef = useRef('')
+
+    const [
+        createUserWithEmailAndPassword,
+        user,
+        loading,
+        error,
+    ] = useCreateUserWithEmailAndPassword(auth);
+
+    if (error) {
+        return (
+            <div>
+                <p>Error: {error.message}</p>
+            </div>
+        );
+    }
+    if (loading) {
+        return <p>Loading...</p>;
+    }
 
     const handleRegister = (event) => {
         const email = emailRef.current.value
@@ -12,6 +35,7 @@ const Register = () => {
         const name = nameRef.current.value
         console.log(name, password, email)
         event.preventDefault()
+        createUserWithEmailAndPassword(email, password)
     }
     return (
         <div>
@@ -31,9 +55,13 @@ const Register = () => {
                     <Form.Label>Password</Form.Label>
                     <Form.Control ref={passwordRef} type="password" placeholder="Password" required />
                 </Form.Group>
+
+                <p>Already Have an account ? <Link to='/login' className='text-info pe-auto text-decoration-none'>Please login </Link></p>
                 <Form.Group className="mb-3" controlId="formBasicCheckbox">
                     <Form.Check type="checkbox" label="Check me out" />
                 </Form.Group>
+                <p className='pe-auto'>{loading}</p>
+                {/* <p className='text-danger pe-auto'>{error}</p> */}
                 <Button variant="primary" type="submit">
                     Submit
                 </Button>

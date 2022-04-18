@@ -1,10 +1,18 @@
 .about-container {
-    border: 2px solid blue;
-    height: 300px;
-    width: 500px;
+    border: 2px solid rgb(0, 225, 255);
+    /* height: 300px; */
+    /* width: 500px; */
+    width: 50%;
     margin: auto;
+    padding: 20px;
 }
 
 .about-img {
-    margin-left: 150px;
+    margin-left: 230px;
+}
+
+@media only screen and (max-width:576px) {
+    .about-img {
+        margin: auto;
+    }
 }
