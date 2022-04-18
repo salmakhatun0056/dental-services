@@ -7,12 +7,6 @@ import './Service.css'
 
 const Service = ({ service }) => {
     const { name, img, price, description } = service
-    // const [user] = useAuthState(auth);
-    // const navigate = useNavigate()
-
-    // if (!user) {
-    //     navigate('/login')
-    // }
     return (
 
         <div className='service p-2'>
