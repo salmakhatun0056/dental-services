@@ -18,16 +18,16 @@ const Register = () => {
         error,
     ] = useCreateUserWithEmailAndPassword(auth);
 
-    if (error) {
-        return (
-            <div>
-                <p>Error: {error.message}</p>
-            </div>
-        );
-    }
-    if (loading) {
-        return <p>Loading...</p>;
-    }
+    // if (error) {
+    //     return (
+    //         <div>
+    //             <p>Error: {error.message}</p>
+    //         </div>
+    //     );
+    // }
+    // if (loading) {
+    //     return <p>Loading...</p>;
+    // }
 
     const handleRegister = (event) => {
         const email = emailRef.current.value
@@ -59,9 +59,11 @@ const Register = () => {
                 <p>Already Have an account ? <Link to='/login' className='text-info pe-auto text-decoration-none'>Please login </Link></p>
                 <Form.Group className="mb-3" controlId="formBasicCheckbox">
                     <Form.Check type="checkbox" label="Check me out" />
+                    {/* <p className='pe-auto'>{loading}</p> */}
+                    {error && <p className='text-danger pe-auto'>{error.message}</p>}
                 </Form.Group>
-                <p className='pe-auto'>{loading}</p>
-                {/* <p className='text-danger pe-auto'>{error}</p> */}
+
+
                 <Button variant="primary" type="submit">
                     Submit
                 </Button>

@@ -8,7 +8,7 @@ const About = () => {
             <div className='about-container'>
                 <div >
                     <div className='about-img'>
-                        <img style={{ height: 150 }} src="https://i.ibb.co/1vtjGKq/69214609-222807605358660-3567179753343418368-n.jpg" alt="" />
+                        <img style={{ height: 150 }} src="https://i.ibb.co/xYwZjgF/2022-04-17-1.png" alt="" />
                     </div>
                     <div className='text-center'>
                         <h2 className='text-info mt-2'>Salma Khatun</h2>

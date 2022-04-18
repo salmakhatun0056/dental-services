@@ -1,0 +1,9 @@
+.notfound {
+    margin-left: 400px;
+}
+
+@media only screen and (max-width:576px) {
+    .notfound {
+        margin-left: 100px;
+    }
+}
