@@ -9,7 +9,32 @@ const Blog = () => {
             <div className='blog-container container text-center'>
                 <div className='blog'>
                     <h5 className='text-info text-center'>Difference between authorization and authentication</h5>
-                    <p> Ans: <small>Simply put, authentication is the process of verifying who someone is, whereas authorization is the process of verifying what specific applications, files, and data a user has access to. The situation is like that of an airline that needs to determine which people can come on board.</small></p>
+                    <table className='w-100' border='1px'>
+                        <thead>
+                            <tr>
+                                <th>Authentication</th>
+                                <th>Authorization</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td>Authentication verifies who the user is.</td>
+                                <td>Authorization determines what resources a user can access.</td>
+                            </tr>
+                            <tr>
+                                <td>Authentication works through passwords, one-time pins, biometric information, and other information provided or entered by the user.</td>
+                                <td>Authorization works through settings that are implemented and maintained by the organization.</td>
+                            </tr>
+                            <tr>
+                                <td>Authentication is the first step of a good identity and access management process.</td>
+                                <td>Authorization always takes place after authentication.</td>
+                            </tr>
+                            <tr>
+                                <td>Authentication is visible to and partially changeable by the user.</td>
+                                <td>Authorization isn't visible to or changeable by the user.</td>
+                            </tr>
+                        </tbody>
+                    </table>
                 </div>
                 <div className='blog'>
                     <h5 className='text-info text-center'>Why are you using firebase? What other options do you have to implement authentication? </h5>

@@ -1,8 +1,5 @@
 import React from 'react';
-import { useAuthState } from 'react-firebase-hooks/auth';
-import { Link, useNavigate, } from 'react-router-dom';
-import auth from '../../../firebase.init';
-import CustomLink from '../../Shared/CustomLink/CustomLink';
+import { Link, } from 'react-router-dom';
 import './Service.css'
 
 const Service = ({ service }) => {
@@ -15,9 +12,9 @@ const Service = ({ service }) => {
             </div>
             <div className='text-center mt-3'>
                 <h2 className='text-info'>{name}</h2>
-                <p>Price:${price}</p>
+                <p style={{ color: 'orange' }}>Price:${price}</p>
                 <p>Description: <small>{description}</small></p>
-                <CustomLink className='btn btn-info w-50 p-0' as={Link} to="/checkout">CheckOut</CustomLink>
+                <Link className='btn btn-info w-50 p-0' as={Link} to="/checkout">CheckOut</Link>
             </div>
         </div>
     );

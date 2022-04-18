@@ -5,6 +5,13 @@
     margin-top: 2rem;
 }
 
+table,
+th,
+td {
+    border: 1px solid rgb(5, 193, 236);
+    border-width: 1px !important;
+}
+
 .blog {
     border: 2px solid rgb(0, 217, 255);
     padding: 20px;
