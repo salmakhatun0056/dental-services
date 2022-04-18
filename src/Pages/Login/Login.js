@@ -1,6 +1,7 @@
 import React, { useRef } from 'react';
 import { Button, Form } from 'react-bootstrap';
 import { Link } from 'react-router-dom';
+import SocialLogin from '../Home/SocialLogin/SocialLogin';
 
 const Login = () => {
     const emailRef = useRef('')
@@ -35,6 +36,7 @@ const Login = () => {
                     Submit
                 </Button>
             </Form>
+            <SocialLogin></SocialLogin>
         </div>
     );
 };

@@ -3,6 +3,7 @@ import { Button, Form } from 'react-bootstrap';
 import auth from '../../../firebase.init';
 import { useCreateUserWithEmailAndPassword } from 'react-firebase-hooks/auth';
 import { Link } from 'react-router-dom';
+import SocialLogin from '../SocialLogin/SocialLogin';
 
 
 const Register = () => {
@@ -62,12 +63,11 @@ const Register = () => {
                     {/* <p className='pe-auto'>{loading}</p> */}
                     {error && <p className='text-danger pe-auto'>{error.message}</p>}
                 </Form.Group>
-
-
                 <Button variant="primary" type="submit">
-                    Submit
+                    Register
                 </Button>
             </Form>
+            <SocialLogin></SocialLogin>
         </div>
     );
 };
